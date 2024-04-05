@@ -1,17 +1,21 @@
-<!--
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Músicas Mais Tocadas</title>
+    <title>Charts Deezer</title>
 </head>
 <body>
-    <h1>Músicas Mais Tocadas no Deezer</h1>
+    <h1>Top 10 músicas mais tocadas!</h1>
     <ul>
-        //TODO: Exibir os dados na página HTML 
+        {% for musica in musicas %}
+        
+            <strong>Posição:</strong> {{ musica.position }}<br>
+            <strong>Nome da música:</strong> {{ musica.title }}<br>
+            <strong>Artista:</strong> {{ musica.artist }}<br>
+            <strong>Álbum:</strong> {{ musica.album }}<br><br>
+        
+        {% endfor %}
     </ul>
 </body>
 </html>
-
--->
